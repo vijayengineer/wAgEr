@@ -1,0 +1,2 @@
+rootProject.name='wAger'
+include ':app'

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <SeekBar
+        android:id="@+id/durationBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="266dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="88dp"
+        android:indeterminate="false"
+        android:max="10"
+        android:min="0"
+        android:progress="3"
+        android:progressTint="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLoanAmount" />
+
+    <SeekBar
+        android:id="@+id/riskBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="266dp"
+        android:layout_height="69dp"
+        android:max="10"
+        android:min="0"
+        android:progress="7"
+        android:progressTint="#F44336"
+        app:layout_constraintBottom_toTopOf="@+id/textViewLoanAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRiskLevel" />
+
+    <SeekBar
+        android:id="@+id/amountBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="266dp"
+        android:layout_height="69dp"
+        android:indeterminate="false"
+        android:max="10"
+        android:min="0"
+        android:progress="3"
+        android:progressTint="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLoanAmount" />
+
+    <TextView
+        android:id="@+id/textViewAccountAddress"
+        android:layout_width="361dp"
+        android:layout_height="31dp"
+        android:clickable="true"
+        android:text="@string/account_1"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAccountBalance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewAccountBalance"
+        android:layout_width="355dp"
+        android:layout_height="28dp"
+        android:text="@string/balance"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewRiskLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAccountAddress" />
+
+    <TextView
+        android:id="@+id/textViewRiskLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/risk_level"
+        app:layout_constraintBottom_toTopOf="@+id/riskBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAccountBalance" />
+
+
+    <TextView
+        android:id="@+id/textViewLoanAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/amount_to_lend"
+        app:layout_constraintBottom_toTopOf="@+id/amountBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/riskBar" />
+
+    <TextView
+        android:id="@+id/textViewDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loan_duration"
+        app:layout_constraintBottom_toTopOf="@+id/durationBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountBar"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <Button
+        android:id="@+id/buttonCreateWager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_light"
+        android:text="@string/wager"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/pieChart1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintVertical_bias="0.42"
+        app:layout_constraintTop_toBottomOf="@+id/durationBar"
+        />
+
+    <com.anychart.AnyChartView
+        android:id="@+id/lineChart1"
+        android:layout_width="360dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/pieChart1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/durationBar"
+        app:layout_constraintVertical_bias="0.21">
+
+    </com.anychart.AnyChartView>
+
+    <com.anychart.AnyChartView
+        android:id="@+id/pieChart1"
+        android:layout_width="360dp"
+        android:layout_height="240dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCreateWager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lineChart1"
+        app:layout_constraintVertical_bias="1.0"></com.anychart.AnyChartView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

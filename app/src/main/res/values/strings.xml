@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">🦄 wAgEr 🇬🇧</string>
+    <string name="bashboard">Dashboard</string>
+    <string name="action_dashboard">Dashboard</string>
+    <string name="action_settings">Settings</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="wager">WAGER</string>
+    <string name="proportion">Proportion</string>
+    <string name="asset_name">Asset Name</string>
+    <string name="ml_results">ML Results</string>
+    <string name="amount_to_lend">Amount to Lend</string>
+    <string name="loan_duration">Loan duration</string>
+    <string name="risk_level">Risk Level</string>
+    <string name="balance">Balance:</string>
+    <string name="account_1">Account #1</string>
+</resources>
